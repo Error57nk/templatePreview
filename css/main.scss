@@ -1,0 +1,64 @@
+
+$btnBg-1:#333;
+$parnetBg:#ccc;
+$parnetBdColor:#333;
+
+.tmain{
+    background-color: #ccc;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #333;    
+    display: flex;
+    flex-direction: column;
+    &_header{}
+    
+    &_footer{}
+
+    &_content{
+        flex: 1;
+        display: flex;
+        gap: 7px;
+        padding-right: 7px;
+        border: 1px solid #333;
+        &_coder{
+            flex: 1;
+        }
+        &_preview{
+            position: relative;
+            width: 200px;
+            padding: 5;
+            border-left: 1px solid #333;
+
+            & .tc_prev{
+                display: flex;
+                flex-direction: column;
+                &_head{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    & .togler{
+
+                    }
+                    & .action{
+                        ul{
+                            padding: 0;
+                            margin: 0;
+                            list-style: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-wrap: nowrap;
+                            gap: 4px;
+                            li{
+                                background: rgb(77, 155, 243);
+                            }
+                        }
+                    }
+                }
+                &_cont{}
+                &_foot{}
+            }
+            
+        }
+    }
+}
