@@ -1,60 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Template Picker Components</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB APP</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+
+    <!-- Style -->
+    <!-- your css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
     <style>
-        main{
-            height: 87vh;
-        }
+      main {
+        height: 87vh;
+      }
     </style>
-</head>
-<body style="height: 100vh;">
-    
-    <header class="bg-dark text-white p-2">Header</header>
 
-
+    <header class="bg-dark text-white p-2">
+      <div class="tmain_head_lead">
+        <h6 class="title"><i class="fas fa-code"></i> Template Creator</h6>
+      </div>
+    </header>
 
     <main>
-        <div class="tmain">
-            <div class="tmain_head">Head</div>
-            <div class="tmain_content">
-                <div class="tmain_content_coder">
-                    <div class="coderBx">coder</div>
-                </div>
-                <div class="tmain_content_preview tc_prev">
-                    <div class="tc_prev_head">
-                        <div class="togler">></div>
-                        <div class="action">
-                            <ul>
-                                <li>W</li>
-                                <li>T</li>
-                                <li>M H</li>
-                                <li>M N</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tc_prev_cont"></div>
-                    <div class="tc_prev_foot"></div>
-                </div>
+      <div class="tmain">
+        <div class="tmain_head">
+          <div class="d-flex tempInfo">
+            <div class="templateId">
+              <input class="form-cony" type="text" placeholder="Template Id" />
             </div>
-            <div class="tmain_foot">Footer</div>
+            <div class="category">
+              <input class="form-cony" type="text" placeholder="Category" />
+            </div>
+            <div class="desc">
+              <input class="form-cony" type="text" placeholder="Description" />
+            </div>
+          </div>
         </div>
+        <div class="tmain_head"></div>
+        <div class="tmain_content">
+          <div class="tmain_content_coder">
+            <div class="coderBx">
+              <div class="coderBx_head d-flex">
+                <div class="leftsec action-sheet">
+                  <div class="action-sheet_bx">
+                    <div class="action-sheet_bx_item active">
+                      <i class="fas fa-code"></i> HTML
+                    </div>
+                    <div class="action-sheet_bx_item">
+                      <i class="fab fa-css3"></i> STYLE
+                    </div>
+                    <div class="action-sheet_bx_item">
+                      <i class="fab fa-js"></i> JS
+                    </div>
+                    <div class="action-sheet_bx_item">
+                      <i class="fas fa-server"></i> Sample Data
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex rightsec">
+                  <div class="action-sheet d-flex">
+                    <div class="ml-3 d-flex action-sheet_bx">
+                      <div class="action-sheet_bx_item active">
+                        <i class="fas fa-border-all"></i> <span>ALL</span>
+                      </div>
+                      <div class="action-sheet_bx_item">
+                        <i class="fas fa-desktop"></i> <span>Web</span>
+                      </div>
+                      <div class="action-sheet_bx_item">
+                        <i class="fas fa-tablet"></i> <span>Tab</span>
+                      </div>
+                      <div class="action-sheet_bx_item">
+                        <i class="fas fa-mobile"></i> <span>Phone</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="action-sheet d-flex">
+                    <div class="action-sheet_bx">
+                      <div class="action-sheet_bx_item">
+                        <div class=""><span>Load Initail</span></div>
+                      </div>
+                      <div class="action-sheet_bx_item">
+                        <input
+                          type="radio"
+                          name="loadInitial"
+                          value="Y"
+                          id="loadInitYes"
+                        />
+                        <label for="loadInitYes">Yes</label>
+                      </div>
+                      <div class="action-sheet_bx_item">
+                        <input
+                          type="radio"
+                          name="loadInitial"
+                          value="N"
+                          id="loadInitNo"
+                        />
+                        <label for="loadInitNo">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="coderBx_cont" style="height: 70vh;">
+               
+              </div>
+              <div class="coderBx_foot"></div>
+            </div>
+          </div>
+          <div class="tmain_content_preview tc_prev">
+            <div class="tc_prev_head">
+              <div class="togler d-none">
+                <i class="fas fa-chevron-left"></i>
+              </div>
+              <div class="togler"><i class="fas fa-chevron-right"></i></div>
+              <div class="action">
+                <ul>
+                  <li class="active"><i class="fas fa-desktop"></i></li>
+                  <li><i class="fas fa-tablet"></i></li>
+                  <li><i class="fas fa-mobile"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tc_prev_cont">preview</div>
+            <div class="tc_prev_foot"></div>
+          </div>
+        </div>
+        <div class="tmain_foot d-flex">
+            <div class="">
+                <button class="btn btn-warning">Cancel</button>
+            </div>
+            <div class=" savepnl">
+                <button class="btn btn-success">Save</button>
+            </div>
+        </div>
+      </div>
     </main>
 
-
-
     <footer class="bg-dark text-white p-2">footer</footer>
-        
-   
 
-    <script src="./js/jquerry.js"></script>
+    <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <script src=""
+    <script src="./js/fontawesome.min.js"></script>
+
+    <!-- your scripts -->
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>

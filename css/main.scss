@@ -1,64 +1,172 @@
+$btnBg-1: #333;
+$parnetBg: #ccc;
+$parnetBdColor: #333;
+$colorHover: rgb(77, 155, 243);
+.tmain {
+  background-color: #ccc;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  & h6 {
+    margin: 0;
+    &.title {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
 
-$btnBg-1:#333;
-$parnetBg:#ccc;
-$parnetBdColor:#333;
+  & .action-sheet {
+    justify-content: center;
+    align-items: center;
 
-.tmain{
-    background-color: #ccc;
-    height: 100%;
-    width: 100%;
-    border: 1px solid #333;    
+    &_bx {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      &_item {
+        background-color: #fff;
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        height: 30px;
+        cursor: pointer;
+        &.active,
+        &:hover {
+          background-color: $colorHover;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &_head {
+    padding: 3px 10px;
+    background: #333;
+    display: flex;
+    gap: 15px;
+    & .tempInfo {
+      gap: 10px;
+
+      input {
+        padding: 2px 7px;
+        border-radius: 10px;
+        border: none;
+      }
+      & .desc input {
+        min-width: 400px;
+      }
+    }
+  }
+
+  &_foot {
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 10px;
+    .savepnl{
+        
+    }
+  }
+
+  &_content {
+    flex: 1;
+    display: flex;
+    gap: 7px;
+
+    border: 1px solid #333;
+    &_coder {
+      flex: 1;
+    }
+    &_preview {
+      position: relative;
+      width: 200px;
+      padding: 5;
+      border-left: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      & .tc_prev {
+        &_head {
+          display: flex;
+          justify-content: space-between;
+          align-content: stretch;
+          // padding: 0 5px;
+          background-color: tan;
+          & * {
+            cursor: pointer;
+            &:hover {
+              color: $colorHover;
+            }
+          }
+          & .togler {
+            background-color: #333;
+            padding: 0 5px;
+            color: #fff;
+          }
+          & .action {
+            padding-right: 15px;
+            ul {
+              padding: 0;
+              margin: 0;
+              list-style: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-wrap: nowrap;
+              color: #ccc;
+              gap: 10px;
+              li {
+                &.active {
+                  color: $colorHover;
+                }
+              }
+            }
+          }
+        }
+        &_cont {
+          flex: 1;
+          background-color: #fff;
+        }
+        &_foot {
+        }
+      }
+    }
+  }
+  & .coderBx {
     display: flex;
     flex-direction: column;
-    &_header{}
-    
-    &_footer{}
+    padding-left: 10px;
+    &_head {
+      padding: 5px 0;
+      justify-content: space-between;
+      gap: 10px;
 
-    &_content{
-        flex: 1;
-        display: flex;
+      .leftsec {
+        &.action-sheet .action-sheet_bx {
+          border-radius: unset;
+          gap: 15px;
+        }
+      }
+      .rightsec {
         gap: 7px;
-        padding-right: 7px;
-        border: 1px solid #333;
-        &_coder{
-            flex: 1;
-        }
-        &_preview{
-            position: relative;
-            width: 200px;
-            padding: 5;
-            border-left: 1px solid #333;
-
-            & .tc_prev{
-                display: flex;
-                flex-direction: column;
-                &_head{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    & .togler{
-
-                    }
-                    & .action{
-                        ul{
-                            padding: 0;
-                            margin: 0;
-                            list-style: none;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            flex-wrap: nowrap;
-                            gap: 4px;
-                            li{
-                                background: rgb(77, 155, 243);
-                            }
-                        }
-                    }
-                }
-                &_cont{}
-                &_foot{}
-            }
-            
-        }
+      }
     }
+    &_foot {
+    }
+    &_cont {
+        padding: 5px;
+      position: relative;
+      max-height: 65vh;
+      border: 1px solid #e61010;
+      overflow: auto;
+    }
+  }
 }
