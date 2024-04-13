@@ -15,141 +15,143 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+   
     <style>
-      main {
-        height: 87vh;
+      /* custom style for auto suggest : START */
+      .box, .styleProp_bx{
+        /* height: 20px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
       }
+
+      .input, .styleProp_bxinput{
+        /* height: 20px; */
+        font-size: 12px;
+      }
+
+      .icon, .styleProp_bxinput_icon{
+        font-size: 12px;
+      }
+      .styleProp_autoRes{
+
+      }
+      .styleProp_autoRes ul{
+        background: #fff;
+        box-shadow: 1px 1px 3px #00000070;
+      }
+      .styleProp_autoRes ul li{
+        font-size: 12px;
+      }
+      .styleProp_autoRes ul li:hover{background-color: greenyellow!important;}
+      /* custom style for auto suggest : END*/
     </style>
 
-    <header class="bg-dark text-white p-2">
-      <div class="tmain_head_lead">
-        <h6 class="title"><i class="fas fa-code"></i> Template Creator</h6>
-      </div>
-    </header>
-
-    <main>
-      <div class="tmain">
-        <div class="tmain_head">
-          <div class="d-flex tempInfo">
-            <div class="templateId">
-              <input class="form-cony" type="text" placeholder="Template Id" />
-            </div>
-            <div class="category">
-              <input class="form-cony" type="text" placeholder="Category" />
-            </div>
-            <div class="desc">
-              <input class="form-cony" type="text" placeholder="Description" />
-            </div>
-          </div>
+  <section class="designer">
+    <div class="main"></div>
+    <div class="rightCmp">
+      <div class="styleComp" dname="main">
+        <div class="selectHeader" dname="header">
+          <h6 class="title"><i class="fas fa-palette"></i> Style Component</h6>
         </div>
-        <div class="tmain_head"></div>
-        <div class="tmain_content">
-          <div class="tmain_content_coder">
-            <div class="coderBx">
-              <div class="coderBx_head d-flex">
-                <div class="leftsec action-sheet">
-                  <div class="action-sheet_bx">
-                    <div class="action-sheet_bx_item active">
-                      <i class="fas fa-code"></i> HTML
-                    </div>
-                    <div class="action-sheet_bx_item">
-                      <i class="fab fa-css3"></i> STYLE
-                    </div>
-                    <div class="action-sheet_bx_item">
-                      <i class="fab fa-js"></i> JS
-                    </div>
-                    <div class="action-sheet_bx_item">
-                      <i class="fas fa-server"></i> Sample Data
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex rightsec">
-                  <div class="action-sheet d-flex">
-                    <div class="ml-3 d-flex action-sheet_bx">
-                      <div class="action-sheet_bx_item active">
-                        <i class="fas fa-border-all"></i> <span>ALL</span>
-                      </div>
-                      <div class="action-sheet_bx_item">
-                        <i class="fas fa-desktop"></i> <span>Web</span>
-                      </div>
-                      <div class="action-sheet_bx_item">
-                        <i class="fas fa-tablet"></i> <span>Tab</span>
-                      </div>
-                      <div class="action-sheet_bx_item">
-                        <i class="fas fa-mobile"></i> <span>Phone</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="action-sheet d-flex">
-                    <div class="action-sheet_bx">
-                      <div class="action-sheet_bx_item">
-                        <div class=""><span>Load Initail</span></div>
-                      </div>
-                      <div class="action-sheet_bx_item">
-                        <input
-                          type="radio"
-                          name="loadInitial"
-                          value="Y"
-                          id="loadInitYes"
-                        />
-                        <label for="loadInitYes">Yes</label>
-                      </div>
-                      <div class="action-sheet_bx_item">
-                        <input
-                          type="radio"
-                          name="loadInitial"
-                          value="N"
-                          id="loadInitNo"
-                        />
-                        <label for="loadInitNo">No</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="coderBx_cont" style="height: 70vh;">
-               
-              </div>
-              <div class="coderBx_foot"></div>
-            </div>
-          </div>
-          <div class="tmain_content_preview tc_prev">
-            <div class="tc_prev_head">
-              <div class="togler d-none">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-              <div class="togler"><i class="fas fa-chevron-right"></i></div>
-              <div class="action">
-                <ul>
-                  <li class="active"><i class="fas fa-desktop"></i></li>
-                  <li><i class="fas fa-tablet"></i></li>
-                  <li><i class="fas fa-mobile"></i></li>
-                </ul>
-              </div>
-            </div>
-            <div class="tc_prev_cont">preview</div>
-            <div class="tc_prev_foot"></div>
-          </div>
-        </div>
-        <div class="tmain_foot d-flex">
+        <div class="selectInfo" dname="info"></div>
+        <div class="selectProp" dname="proSection">
+          <div class="selectProp_header">
             <div class="">
-                <button class="btn btn-warning">Cancel</button>
+              <h6 class="title"><i class="fas fa-paint-brush"></i> Properties</h6>
             </div>
-            <div class=" savepnl">
-                <button class="btn btn-success">Save</button>
+            <div class="btn-action">
+              <button class="btn btn-addProp"><i class="fas fa-ellipsis-v"></i></button>
+            </div>            
+          </div>
+          <div class="selectProp_state">           
+             <div class="selectProp_state_pnl">
+              <button class="active">Defalut</button>
+              <button>Hover</button>
+              <button>Active</button>
+             </div>           
+          </div>
+          <div class="selectProp_area">
+            <div class="propItem">
+              <div class="propItem-enBx">
+                <button><i class="fas fa-check"></i></button>
+                <!-- <button class="propItem-more-btn"><i class="fas fa-ellipsis-v"></i></button> -->
+                <!-- <input type="checkbox" name="" id=""> -->
+              </div>
+              <div class="propItem-propBx">
+                <div class="propItem-propBx-key" id="propInput"></div>
+                <div class="propItem-propBx-val">
+                  <input type="text" class="propItem-val" placeholder="Value" >
+                </div>
+              </div>
+              
             </div>
+
+            <div class="setPItem">
+              <div class="setPItem_enb"><input type="checkbox" name="" id=""></div>
+              <div class="setPItem_pv">
+                <span class="setPItem_pv_p">Background</span>
+                <span class="setPItem_pv_v">red</span>                
+              </div>
+              <div class="setPItem_opt"><button class="btn btn-addProp"><i class="fas fa-ellipsis-v"></i></button></div>
+            </div>
+
+          </div>
         </div>
       </div>
-    </main>
+    </div>
+  </section>
 
-    <footer class="bg-dark text-white p-2">footer</footer>
+
+
+
+
 
     <script src="./js/jquery.js"></script>
+    <script src="./js/jsUtil.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/fontawesome.min.js"></script>
+    <script src="./js/AutoSuggest_v0.2.js"></script>
 
     <!-- your scripts -->
-    <script src="./js/main.js"></script>
+    <script src="./styleComponent.js"></script>
+
+    <script>
+      let obj = $('#propInput')
+      let sobj =[
+        {pid:1, name:'BackgroundColor', value:'background-color', valueField:'text'},
+        {pid:2, name:'Color', value:'color', valueField:'zx'},
+        {pid:3, name:'BorderRadius', value:'borderRadius', valueField:'text'},
+        {pid:3, name:'bola', value:'borderRadius', valueField:'text'},
+        {pid:3, name:'boot', value:'borderRadius', valueField:'text'},
+        {pid:3, name:'bros', value:'borderRadius', valueField:'text'},
+        {pid:4, name:'fontSize', value:'font-size', valueField:'text'},
+      ]
+      let auto = new AutoSuggest(obj, {compId:'styleProp', data:sobj, dataKey:'pid', dataVal:'name'}, (val, key,completeObj, context)=>{
+        console.log('val', val, key, completeObj, context)
+      })
+      // let auto2 = new AutoSuggest(obj, {compId:'style', data:sobj, dataKey:'name', dataVal:'pid'})
+
+      /*
+      box:{
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      input:{
+        height: 20px;
+        font-size: 12px;
+      }
+
+      icon:{
+        font-size: 12px;
+      }
+
+      */ 
+    </script>
   </body>
 </html>

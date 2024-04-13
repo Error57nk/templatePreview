@@ -1,144 +1,179 @@
-.tmain {
-  background-color: #ccc;
-  height: 100%;
+.designer {
+  display: flex;
+  height: 95vh;
   width: 100%;
-  border: 1px solid #333;
-  display: flex;
-  flex-direction: column;
-}
-.tmain h6 {
-  margin: 0;
-}
-.tmain h6.title {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.tmain .action-sheet {
-  justify-content: center;
-  align-items: center;
-}
-.tmain .action-sheet_bx {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 10px;
+  background: #333;
   overflow: hidden;
 }
-.tmain .action-sheet_bx_item {
+.designer .main {
+  flex: 1;
+}
+.designer .rightCmp {
+  width: 250px;
   background-color: #fff;
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  height: 30px;
-  cursor: pointer;
 }
-.tmain .action-sheet_bx_item.active, .tmain .action-sheet_bx_item:hover {
-  background-color: rgb(77, 155, 243);
-  color: #fff;
-}
-.tmain_head {
-  padding: 3px 10px;
-  background: #333;
-  display: flex;
-  gap: 15px;
-}
-.tmain_head .tempInfo {
-  gap: 10px;
-}
-.tmain_head .tempInfo input {
-  padding: 2px 7px;
-  border-radius: 10px;
-  border: none;
-}
-.tmain_head .tempInfo .desc input {
-  min-width: 400px;
-}
-.tmain_foot {
-  justify-content: space-between;
-  align-items: center;
-  margin: 3px 10px;
-}
-.tmain_content {
-  flex: 1;
-  display: flex;
-  gap: 7px;
-  border: 1px solid #333;
-}
-.tmain_content_coder {
-  flex: 1;
-}
-.tmain_content_preview {
-  position: relative;
-  width: 200px;
-  padding: 5;
-  border-left: 1px solid #333;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.tmain_content_preview .tc_prev_head {
-  display: flex;
-  justify-content: space-between;
-  align-content: stretch;
-  background-color: tan;
-}
-.tmain_content_preview .tc_prev_head * {
-  cursor: pointer;
-}
-.tmain_content_preview .tc_prev_head *:hover {
-  color: rgb(77, 155, 243);
-}
-.tmain_content_preview .tc_prev_head .togler {
-  background-color: #333;
-  padding: 0 5px;
-  color: #fff;
-}
-.tmain_content_preview .tc_prev_head .action {
-  padding-right: 15px;
-}
-.tmain_content_preview .tc_prev_head .action ul {
-  padding: 0;
+
+.styleComp .title {
   margin: 0;
-  list-style: none;
+  font-weight: bold;
+}
+.styleComp .selectHeader {
+  padding: 3px 7px;
+}
+.styleComp .selectHeader .title {
+  font-weight: bold;
+}
+.styleComp .selectInfo {
+  height: 100px;
+  background: #fff;
+}
+.styleComp .selectProp_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  padding: 2px 5px;
+}
+.styleComp .selectProp_header .btn-action button {
+  color: black;
+  padding: 0px 4px;
+}
+.styleComp .selectProp_state {
+  position: relative;
+  z-index: 1;
+  padding: 2px 5px;
+}
+.styleComp .selectProp_state_pnl {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+  z-index: 1;
+}
+.styleComp .selectProp_state_pnl button {
+  border: 1px solid red;
+  background-color: #fff;
+  font-size: 12px;
+}
+.styleComp .selectProp_state_pnl button.active, .styleComp .selectProp_state_pnl button:hover {
+  background-color: orange;
+  color: #fff;
+}
+.styleComp .selectProp_area {
+  position: relative;
+}
+.styleComp .selectProp_area::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: -15px;
+  left: 1px;
+  right: 10px;
+  width: 100%;
+  height: 50vh;
+  border-left: 2px solid rgba(244, 158, 87, 0.8235294118);
+  border-top: 2px solid rgba(244, 158, 87, 0.8235294118);
+}
+.styleComp .selectProp_area > div {
+  position: relative;
+  z-index: 1;
+}
+.styleComp .selectProp_area .propItem {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 2px;
+  background-color: #fff;
+  border-radius: 0 10px 10px 0;
+  margin: 3px;
+  padding: 2px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.8117647059);
+}
+.styleComp .selectProp_area .propItem-enBx {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #333;
+  overflow: hidden;
+}
+.styleComp .selectProp_area .propItem-enBx button {
+  background-color: #fff;
+  border: none;
+  padding: 2px;
+  font-size: 12px;
+  color: green;
+  height: 48px;
+  width: 25px;
+}
+.styleComp .selectProp_area .propItem-enBx button:hover {
+  background-color: orange;
+  color: #fff;
+}
+.styleComp .selectProp_area .propItem-propBx {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.styleComp .selectProp_area .propItem-propBx-key, .styleComp .selectProp_area .propItem-propBx-val {
+  flex: 1;
+  height: 25px;
+}
+.styleComp .selectProp_area .propItem-propBx-key input, .styleComp .selectProp_area .propItem-propBx-val input {
+  height: inherit;
+  width: 100%;
+  font-size: 12px;
+}
+.styleComp .selectProp_area .setPItem {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.537254902);
+  margin: 3px 3px 0 3px;
+}
+.styleComp .selectProp_area .setPItem:hover .setPItem_enb, .styleComp .selectProp_area .setPItem:hover .setPItem_opt {
+  visibility: visible;
+}
+.styleComp .selectProp_area .setPItem_enb, .styleComp .selectProp_area .setPItem_opt {
+  visibility: hidden;
+}
+.styleComp .selectProp_area .setPItem_enb {
+  display: flex;
+  align-items: center;
+}
+.styleComp .selectProp_area .setPItem_pv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  padding: 0 5px;
+  font-family: "Times New Roman", Times, serif;
+}
+.styleComp .selectProp_area .setPItem_pv_p {
+  color: #000;
+  font-weight: bold;
+}
+.styleComp .selectProp_area .setPItem_pv_v {
+  color: #333;
+}
+.styleComp .selectProp_area .setPItem_pv span {
+  font-size: 12px;
+}
+.styleComp .selectProp_area .setPItem_opt {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  color: #ccc;
-  gap: 10px;
 }
-.tmain_content_preview .tc_prev_head .action ul li.active {
-  color: rgb(77, 155, 243);
-}
-.tmain_content_preview .tc_prev_cont {
-  flex: 1;
-  background-color: #fff;
-}
-.tmain .coderBx {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
-}
-.tmain .coderBx_head {
-  padding: 5px 0;
-  justify-content: space-between;
-  gap: 10px;
-}
-.tmain .coderBx_head .leftsec.action-sheet .action-sheet_bx {
+.styleComp .selectProp_area .setPItem_opt button {
   border-radius: unset;
-  gap: 15px;
+  padding: 2px 0;
+  font-size: 12px;
 }
-.tmain .coderBx_head .rightsec {
-  gap: 7px;
-}
-.tmain .coderBx_cont {
-  padding: 5px;
-  position: relative;
-  max-height: 65vh;
-  border: 1px solid #e61010;
-  overflow: auto;
+
+input.propItem-enBx-ip + .propItem-enBx-lb {
+  background: green;
 }/*# sourceMappingURL=main.css.map */
