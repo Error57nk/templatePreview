@@ -50,7 +50,7 @@ $colorHover: rgb(77, 155, 243);
         gap: 2px;
         z-index: 1;
         button{
-          border: 1px solid red;
+          border: 1px solid orange;
           background-color: #fff;
           // box-shadow: 0px 0px 3px #0000008a;
           font-size: 12px;
@@ -176,8 +176,11 @@ $colorHover: rgb(77, 155, 243);
           & button{
             // background-color: red;
             border-radius: unset;
-            padding: 2px 0;
+            padding: 2px 7px;
             font-size: 12px;
+            &:hover{
+              background-color: $colorHover;
+            }
           }
         }
       }

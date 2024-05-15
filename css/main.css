@@ -52,7 +52,7 @@
   z-index: 1;
 }
 .styleComp .selectProp_state_pnl button {
-  border: 1px solid red;
+  border: 1px solid orange;
   background-color: #fff;
   font-size: 12px;
 }
@@ -170,8 +170,11 @@
 }
 .styleComp .selectProp_area .setPItem_opt button {
   border-radius: unset;
-  padding: 2px 0;
+  padding: 2px 7px;
   font-size: 12px;
+}
+.styleComp .selectProp_area .setPItem_opt button:hover {
+  background-color: rgb(77, 155, 243);
 }
 
 input.propItem-enBx-ip + .propItem-enBx-lb {

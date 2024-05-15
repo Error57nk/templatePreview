@@ -45,11 +45,38 @@
         font-size: 12px;
       }
       .styleProp_autoRes ul li:hover{background-color: greenyellow!important;}
+
+      .wrp_mutiValue{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 0 5px;
+      }
+      .wrp_mutiValue .ipBx{
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        border: 1px solid #ccc;
+      } 
+      .wrp_mutiValue .ipBx .ipBxFld,.wrp_mutiValue .ipBx .ipBxUnit  {
+        width: 40%;
+        border: none;
+        background-color: #fff;
+      }
+      .wrp_mutiValue .ipBx .ipBxIcon {color:#fa9b41}
+      .wrp_mutiValue .ipBx .ipBxFld:focus-visible{outline:none;background-color:#cff399}
+      .wrp_mutiValue .ipBx .ipBxFld{
+        background-color: #cccccc4a;
+        margin-left: 3px;
+      }
+      /* .wrp_mutiValue .ipBx .ipBxUnit  {width: 40%;} */
+
       /* custom style for auto suggest : END*/
     </style>
 
   <section class="designer">
-    <div class="main"></div>
+    <div class="main" id="main"> HIII</div>
     <div class="rightCmp">
       <div class="styleComp" dname="main">
         <div class="selectHeader" dname="header">
@@ -97,6 +124,7 @@
               <div class="setPItem_opt"><button class="btn btn-addProp"><i class="fas fa-ellipsis-v"></i></button></div>
             </div>
 
+            <div class="multiVal"></div>
           </div>
         </div>
       </div>
@@ -116,6 +144,8 @@
 
     <!-- your scripts -->
     <script src="./styleComponent.js"></script>
+    <script src="./js/ValueBoxWithUnit.js"></script>
+    <script src="./Component/INPUT.js"></script>
 
     <script>
       let obj = $('#propInput')
@@ -132,7 +162,10 @@
         console.log('val', val, key, completeObj, context)
       })
       // let auto2 = new AutoSuggest(obj, {compId:'style', data:sobj, dataKey:'name', dataVal:'pid'})
-
+      let inputConfig = [{key:'left', defVal:'0', defUnit:'px', iconCls:'fas fa-arrow-circle-left'}]
+      var xp = new ValueBox($('.multiVal'), {totalInput:4, compId:'mutiValue'})
+      var xps = new TEXT_INPUT({iconLeft:'fas fa-arrow-circle-right',iconRight:'fas fa-arrow-circle-right'})
+      $('.multiVal').append(xps)
       /*
       box:{
         height: 20px;
